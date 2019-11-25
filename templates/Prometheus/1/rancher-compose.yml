@@ -1,6 +1,6 @@
 .catalog:
   name: "Prometheus"
-  version: "abc1.2_P1"
+  version: "abc1.2_1"
   description: "Prometheus Monitoring Solution"
   questions:
   - variable: "RANCHER_SERVER_IP"
