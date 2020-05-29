@@ -1,5 +1,0 @@
-name: Rancher Logging
-description: |
-  Rancher Logging Collector
-version: v0.3.1
-category: Infrastructure Services
