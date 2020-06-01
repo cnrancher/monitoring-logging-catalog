@@ -37,7 +37,7 @@
       description: "cadvisor images"
       required: true
       type: "string"
-      default: "10.30.12.7/rancher/cadvisor:v0.33.0-1"
+      default: "rancher/cadvisor:v0.33.0-1"
     - variable: NODE_EXPORTER_IMAGES
       label: "node exporter images"
       description: "node exporter images"
