@@ -1,6 +1,6 @@
 .catalog:
   name: "ChinaLife monitoring"
-  version: "v0.9.0"
+  version: "v0.9.1"
   questions:
     - variable: "CADVISOR_PORT"
       label: "cadvisor port"
