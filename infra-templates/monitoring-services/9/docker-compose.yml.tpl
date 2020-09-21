@@ -44,20 +44,17 @@ services:
     tty: true
     labels:
       io.rancher.container.pull_image: always
-      io.rancher.container.create_agent: 'true'
-      io.rancher.container.agent.role: environment
       io.rancher.scheduler.global: 'true'
       io.rancher.sidekicks: black-box-config
     image: {{  .Values.RANCHER_BLACK_BOX_IMAGES }}
     command: --config.file=/config/blackbox.yaml
+    network_mode: bridge
     ports:
     - {{  .Values.RANCHER_BLACK_BOX_PORT }}:9115
     volumes_from:
       - black-box-config
 
   black-box-config:
-    labels:
-      io.rancher.scheduler.global: 'true'
     image: {{  .Values.RANCHER_BLACK_BOX_CONFIG_IMAGES }}
     stdin_open: true
     network_mode: none
@@ -73,3 +70,4 @@ services:
     labels:
       io.rancher.container.pull_image: always
       io.rancher.container.start_once: 'true'
+      io.rancher.scheduler.global: 'true'
